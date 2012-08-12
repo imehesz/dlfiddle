@@ -83,5 +83,5 @@
 		header("Content-Length: ".filesize($file_name));
 		ob_end_flush();
 		@readfile( $file_name );
-		die();
+		$app->halt( 200 );
 	}
