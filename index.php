@@ -82,6 +82,6 @@
 		header("Content-Transfer-Encoding: binary");
 		header("Content-Length: ".filesize($file_name));
 		ob_end_flush();
-		@readfile( $file_name );
-		$app->halt( 200 );
+		readfile( $file_name );
+		die( 'OK' );
 	}
